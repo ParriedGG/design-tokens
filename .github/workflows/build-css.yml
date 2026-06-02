@@ -6,6 +6,7 @@ on:
             - main
         paths:
             - "tokens.json"
+    workflow_dispatch:
 
 jobs:
     build:
