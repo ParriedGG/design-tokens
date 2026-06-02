@@ -26,9 +26,10 @@ jobs:
             - name: Compile CSS from JSON
               run: npm run build
 
+            - name: Stage generated CSS
+              run: git add -f dist/theme.css
+
             - name: Commit Generated CSS
               uses: stefanzweifel/git-auto-commit-action@v5
               with:
                   commit_message: "chore: auto-generate theme.css from tokens.json"
-                  file_pattern: "dist/theme.css"
-                  push_options: "--force"
