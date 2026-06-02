@@ -82,13 +82,13 @@
   --action-secondary-hover: var(--neutral-100);
   --action-disabled-default: var(--neutral-200);
   --action-disabled-text: var(--neutral-400);
-  --status-success-fg: var(--green-900);
+  --status-success-fg: var(--green-700);
   --status-success-bg: var(--green-500);
-  --status-danger-fg: var(--red-900);
+  --status-danger-fg: var(--red-700);
   --status-danger-bg: var(--red-500);
-  --status-warning-fg: var(--yellow-900);
+  --status-warning-fg: var(--yellow-700);
   --status-warning-bg: var(--yellow-500);
-  --status-info-fg: var(--blue-900);
+  --status-info-fg: var(--blue-700);
   --status-info-bg: var(--blue-500);
 }
 
