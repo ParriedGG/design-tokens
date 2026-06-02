@@ -31,4 +31,4 @@ jobs:
               with:
                   commit_message: "chore: auto-generate theme.css from tokens.json"
                   file_pattern: "dist/theme.css"
-                  add_options: "--force"
+                  push_options: "--force"
