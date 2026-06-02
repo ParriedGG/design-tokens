@@ -1,0 +1,90 @@
+/* AUTO-GENERATED DESIGN TOKENS */
+/* Do not edit directly. Update tokens.json instead. */
+
+:root {
+  --purple-300: #b592eb;
+  --purple-400: #a47ce3;
+  --purple-500: #976ddc;
+  --purple-600: #8a5bd7;
+  --purple-700: #6b42b0;
+  --purple-900: #2a1a4a;
+  --neutral-50: #cdd6f4;
+  --neutral-100: #bac2de;
+  --neutral-200: #a6adc8;
+  --neutral-300: #9399b2;
+  --neutral-400: #7f849c;
+  --neutral-500: #6c7086;
+  --neutral-600: #585b70;
+  --neutral-700: #45475a;
+  --neutral-800: #313244;
+  --neutral-900: #1e1e2e;
+  --neutral-950: #181825;
+  --neutral-1000: #11111b;
+  --green-500: #a6e3a1;
+  --green-900: #2b402b;
+  --red-500: #f38ba8;
+  --red-900: #4a2530;
+  --yellow-500: #f9e2af;
+  --yellow-900: #4d4229;
+  --blue-500: #89b4fa;
+  --blue-900: #263454;
+}
+
+[data-theme="dark"] {
+  --bg-app: var(--neutral-1000);
+  --bg-surface: var(--neutral-950);
+  --bg-surface-elevated: var(--neutral-900);
+  --bg-surface-highest: var(--neutral-800);
+  --text-primary: var(--neutral-50);
+  --text-secondary: var(--neutral-200);
+  --text-muted: var(--neutral-400);
+  --text-inverse: var(--neutral-1000);
+  --border-subtle: var(--neutral-700);
+  --border-active: var(--neutral-500);
+  --border-focus: var(--purple-500);
+  --action-primary-default: var(--purple-500);
+  --action-primary-hover: var(--purple-400);
+  --action-primary-active: var(--purple-700);
+  --action-secondary-default: var(--neutral-800);
+  --action-secondary-hover: var(--neutral-700);
+  --action-disabled-default: var(--neutral-800);
+  --action-disabled-text: var(--neutral-400);
+  --status-success-fg: var(--green-500);
+  --status-success-bg: var(--green-900);
+  --status-danger-fg: var(--red-500);
+  --status-danger-bg: var(--red-900);
+  --status-warning-fg: var(--yellow-500);
+  --status-warning-bg: var(--yellow-900);
+  --status-info-fg: var(--blue-500);
+  --status-info-bg: var(--blue-900);
+}
+
+[data-theme="light"] {
+  --bg-app: var(--neutral-50);
+  --bg-surface: var(--neutral-100);
+  --bg-surface-elevated: var(--neutral-200);
+  --bg-surface-highest: var(--neutral-300);
+  --text-primary: var(--neutral-1000);
+  --text-secondary: var(--neutral-700);
+  --text-muted: var(--neutral-500);
+  --text-inverse: var(--neutral-50);
+  --border-subtle: var(--neutral-300);
+  --border-active: var(--neutral-500);
+  --border-focus: var(--purple-500);
+  --action-primary-default: var(--purple-600);
+  --action-primary-hover: var(--purple-700);
+  --action-primary-active: var(--purple-500);
+  --action-secondary-default: var(--neutral-200);
+  --action-secondary-hover: var(--neutral-100);
+  --action-disabled-default: var(--neutral-200);
+  --action-disabled-text: var(--neutral-400);
+  --status-success-fg: var(--green-500);
+  --status-success-bg: var(--green-900);
+  --status-danger-fg: var(--red-500);
+  --status-danger-bg: var(--red-900);
+  --status-warning-fg: var(--yellow-500);
+  --status-warning-bg: var(--yellow-900);
+  --status-info-fg: var(--blue-500);
+  --status-info-bg: var(--blue-900);
+}
+
