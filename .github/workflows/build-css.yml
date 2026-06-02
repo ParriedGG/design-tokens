@@ -1,0 +1,32 @@
+name: Build and Publish CSS Tokens
+
+on:
+    push:
+        branches:
+            - main
+        paths:
+            - "tokens.json"
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+
+            - name: Compile CSS from JSON
+              run: npm run build
+
+            - name: Commit Generated CSS
+              uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                  commit_message: "chore: auto-generate theme.css from tokens.json"
+                  file_pattern: "dist/theme.css"

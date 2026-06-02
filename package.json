@@ -1,0 +1,8 @@
+{
+    "packageManager": "pnpm@10.6.1",
+    "name": "design-tokens",
+    "license": "LGPL-3.0-or-later",
+    "scripts": {
+        "build": "node scripts/build-tokens.js"
+    }
+}
