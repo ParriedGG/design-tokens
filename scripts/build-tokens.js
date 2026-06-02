@@ -6,6 +6,10 @@ const OUTPUT_PATH = path.join(__dirname, "../dist/theme.css");
 
 const rawTokens = JSON.parse(fs.readFileSync(TOKENS_PATH, "utf-8"));
 
+function toKebabCase(str) {
+    return str.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2").toLowerCase();
+}
+
 function flattenTokens(obj, prefix = "") {
     let result = {};
     for (const [key, value] of Object.entries(obj)) {
@@ -13,13 +17,23 @@ function flattenTokens(obj, prefix = "") {
 
         const newKey = prefix ? `${prefix}-${key}` : key;
 
-        if (
+        const hasValue =
             value &&
             typeof value === "object" &&
-            (value.$value !== undefined || value.value !== undefined)
-        ) {
-            result[newKey] =
+            (value.$value !== undefined || value.value !== undefined);
+
+        if (hasValue) {
+            const rawVal =
                 value.$value !== undefined ? value.$value : value.value;
+
+            if (typeof rawVal === "object") {
+                for (const [prop, propVal] of Object.entries(rawVal)) {
+                    const cssPropName = toKebabCase(prop);
+                    result[`${newKey}-${cssPropName}`] = propVal;
+                }
+            } else {
+                result[newKey] = rawVal;
+            }
         } else if (value && typeof value === "object") {
             Object.assign(result, flattenTokens(value, newKey));
         }
@@ -39,7 +53,6 @@ function formatValue(value) {
             .replace(/\./g, "-")
             .replace(/\s+/g, "")
             .toLowerCase();
-
         return `var(--${alias})`;
     }
 
@@ -56,7 +69,7 @@ for (const [themeName, themeData] of Object.entries(rawTokens)) {
 
     if (
         themeName.toLowerCase() === "primitives" ||
-        themeName.toLowerCase() === "global"
+        themeName.toLowerCase() === "common"
     ) {
         cssContent += `:root {\n`;
     } else {
