@@ -47,9 +47,9 @@
   --weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 700;
-  --line-height-none: 1;
-  --line-height-tight: 1.2;
-  --line-height-base: 1.5;
+  --line-height-none: 100%;
+  --line-height-tight: 120%;
+  --line-height-base: 150%;
   --letter-spacing-normal: 0%;
   --letter-spacing-snug: -1%;
   --letter-spacing-tight: -2%;
